@@ -33,24 +33,30 @@ notas:
     texto: Incluído pela Emenda constitucional nº 99, de 2017
   - dispositivo: par-4
     texto: Revogado pela Emenda Constitucional nº 109, de 2021
-  - dispositivo: par-4-inc-1
-    texto: Revogado pela Emenda Constitucional nº 109, de 2021
-  - dispositivo: par-4-inc-2
-    texto: Revogado pela Emenda Constitucional nº 109, de 2021
-  - dispositivo: par-4-inc-3
-    texto: Revogado pela Emenda Constitucional nº 109, de 2021
-  - dispositivo: par-4-inc-4
-    texto: Revogado pela Emenda Constitucional nº 109, de 2021
   - dispositivo: par-4
     texto: Revogado
   - dispositivo: par-4
     texto: Redação dada pela Emenda Constitucional nº 109, de 2021
   - dispositivo: par-4-inc-1
+    texto: Revogado pela Emenda Constitucional nº 109, de 2021
+  - dispositivo: par-4-inc-1
+    texto: revogado
+  - dispositivo: par-4-inc-1
     texto: Redação dada pela Emenda Constitucional nº 109, de 2021
+  - dispositivo: par-4-inc-2
+    texto: Revogado pela Emenda Constitucional nº 109, de 2021
+  - dispositivo: par-4-inc-2
+    texto: revogado
   - dispositivo: par-4-inc-2
     texto: Redação dada pela Emenda Constitucional nº 109, de 2021
   - dispositivo: par-4-inc-3
+    texto: Revogado pela Emenda Constitucional nº 109, de 2021
+  - dispositivo: par-4-inc-3
+    texto: revogado
+  - dispositivo: par-4-inc-3
     texto: Redação dada pela Emenda Constitucional nº 109, de 2021
+  - dispositivo: par-4-inc-4
+    texto: Revogado pela Emenda Constitucional nº 109, de 2021
   - dispositivo: par-4-inc-4
     texto: revogado
   - dispositivo: par-4-inc-4
@@ -128,26 +134,6 @@ Os recursos adicionais previstos nos incisos I, II e IV do § 2º deste artigo s
 ### <a id="par-4-inc-3"></a>Inciso III
 
 *(Revogado)*
-
-### <a id="par-4-inc-4"></a>Inciso IV
-
-*(Revogado)*
-
-## <a id="par-4"></a>§ 4º
-
-*(Revogado)*
-
-### <a id="par-4-inc-1"></a>Inciso I
-
-(revogado);
-
-### <a id="par-4-inc-2"></a>Inciso II
-
-(revogado);
-
-### <a id="par-4-inc-3"></a>Inciso III
-
-(revogado);
 
 ### <a id="par-4-inc-4"></a>Inciso IV
 
