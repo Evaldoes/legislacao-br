@@ -248,7 +248,7 @@ artigos:
 ### Clonar
 
 ```bash
-git clone https://github.com/SEU-USUARIO/legislacao-br.git
+git clone https://github.com/Evaldoes/legislacao-br.git
 cd legislacao-br
 ```
 
@@ -296,7 +296,7 @@ console.log(artigos.length, "artigos carregados");
 ### Direto do GitHub, sem clonar
 
 ```bash
-curl https://raw.githubusercontent.com/SEU-USUARIO/legislacao-br/main/normas/constituicao-1988/art-196.md
+curl https://raw.githubusercontent.com/Evaldoes/legislacao-br/main/normas/constituicao-1988/art-196.md
 ```
 
 ---
