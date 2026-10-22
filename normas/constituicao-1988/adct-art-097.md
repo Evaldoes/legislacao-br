@@ -1,0 +1,318 @@
+---
+id: constituicao-1988-adct-art-097
+norma: constituicao-1988
+artigo: "97"
+rotulo: Art. 97 do ADCT
+fonte: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm
+capturado_em: 2026-10-22
+revogado: false
+notas:
+  - dispositivo: caput
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: caput
+    texto: Vide Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-1
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-1-inc-1
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-1-inc-2
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-2
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-2-inc-1
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-2-inc-1-al-a
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-2-inc-1-al-b
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-2-inc-2
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-2-inc-2-al-a
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-2-inc-2-al-b
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-3
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-3-inc-1
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-3-inc-2
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-4
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-5
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-6
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-7
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-8
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-8-inc-1
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-8-inc-2
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-8-inc-3
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-9
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-9-inc-1
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-9-inc-2
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-9-inc-3
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-9-inc-4
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-9-inc-5
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-9-inc-6
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-9-inc-7
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-9-inc-8
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-9-inc-9
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-10
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-10-inc-1
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-10-inc-2
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-10-inc-3
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-10-inc-4
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-10-inc-4-al-a
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-10-inc-4-al-b
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-10-inc-5
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-11
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-12
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-12-inc-1
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-12-inc-2
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-13
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-14
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-15
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-16
+    texto: Redação dada pela Emenda Constitucional nº 136, de 2025
+  - dispositivo: par-16-a
+    texto: Incluído pela Emenda Constitucional nº 136, de 2025
+  - dispositivo: par-17
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+  - dispositivo: par-18
+    texto: Incluído pela Emenda Constitucional nº 62, de 2009
+---
+
+# Art. 97 do ADCT
+
+Até que seja editada a lei complementar de que trata o § 15 do art. 100 da Constituição Federal, os Estados, o Distrito Federal e os Municípios que, na data de publicação desta Emenda Constitucional, estejam em mora na quitação de precatórios vencidos, relativos às suas administrações direta e indireta, inclusive os emitidos durante o período de vigência do regime especial instituído por este artigo, farão esses pagamentos de acordo com as normas a seguir estabelecidas, sendo inaplicável o disposto no art. 100 desta Constituição Federal, exceto em seus §§ 2º, 3º, 9º, 10, 11, 12, 13 e 14, e sem prejuízo dos acordos de juízos conciliatórios já formalizados na data de promulgação desta Emenda Constitucional.
+
+## <a id="par-1"></a>§ 1º
+
+Os Estados, o Distrito Federal e os Municípios sujeitos ao regime especial de que trata este artigo optarão, por meio de ato do Poder Executivo:
+
+### <a id="par-1-inc-1"></a>Inciso I
+
+pelo depósito em conta especial do valor referido pelo § 2º deste artigo; ou
+
+### <a id="par-1-inc-2"></a>Inciso II
+
+pela adoção do regime especial pelo prazo de até 15 (quinze) anos, caso em que o percentual a ser depositado na conta especial a que se refere o § 2º deste artigo corresponderá, anualmente, ao saldo total dos precatórios devidos, acrescido do índice oficial de remuneração básica da caderneta de poupança e de juros simples no mesmo percentual de juros incidentes sobre a caderneta de poupança para fins de compensação da mora, excluída a incidência de juros compensatórios, diminuído das amortizações e dividido pelo número de anos restantes no regime especial de pagamento.
+
+## <a id="par-2"></a>§ 2º
+
+Para saldar os precatórios, vencidos e a vencer, pelo regime especial, os Estados, o Distrito Federal e os Municípios devedores depositarão mensalmente, em conta especial criada para tal fim, 1/12 (um doze avos) do valor calculado percentualmente sobre as respectivas receitas correntes líquidas, apuradas no segundo mês anterior ao mês de pagamento, sendo que esse percentual, calculado no momento de opção pelo regime e mantido fixo até o final do prazo a que se refere o § 14 deste artigo, será:
+
+### <a id="par-2-inc-1"></a>Inciso I
+
+para os Estados e para o Distrito Federal:
+
+#### <a id="par-2-inc-1-al-a"></a>Alínea a
+
+de, no mínimo, 1,5% (um inteiro e cinco décimos por cento), para os Estados das regiões Norte, Nordeste e Centro-Oeste, além do Distrito Federal, ou cujo estoque de precatórios pendentes das suas administrações direta e indireta corresponder a até 35% (trinta e cinco por cento) do total da receita corrente líquida;
+
+#### <a id="par-2-inc-1-al-b"></a>Alínea b
+
+de, no mínimo, 2% (dois por cento), para os Estados das regiões Sul e Sudeste, cujo estoque de precatórios pendentes das suas administrações direta e indireta corresponder a mais de 35% (trinta e cinco por cento) da receita corrente líquida;
+
+### <a id="par-2-inc-2"></a>Inciso II
+
+para Municípios:
+
+#### <a id="par-2-inc-2-al-a"></a>Alínea a
+
+de, no mínimo, 1% (um por cento), para Municípios das regiões Norte, Nordeste e Centro-Oeste, ou cujo estoque de precatórios pendentes das suas administrações direta e indireta corresponder a até 35% (trinta e cinco por cento) da receita corrente líquida;
+
+#### <a id="par-2-inc-2-al-b"></a>Alínea b
+
+de, no mínimo, 1,5% (um inteiro e cinco décimos por cento), para Municípios das regiões Sul e Sudeste, cujo estoque de precatórios pendentes das suas administrações direta e indireta corresponder a mais de 35 % (trinta e cinco por cento) da receita corrente líquida.
+
+## <a id="par-3"></a>§ 3º
+
+Entende-se como receita corrente líquida, para os fins de que trata este artigo, o somatório das receitas tributárias, patrimoniais, industriais, agropecuárias, de contribuições e de serviços, transferências correntes e outras receitas correntes, incluindo as oriundas do § 1º do art. 20 da Constituição Federal, verificado no período compreendido pelo mês de referência e os 11 (onze) meses anteriores, excluídas as duplicidades, e deduzidas:
+
+### <a id="par-3-inc-1"></a>Inciso I
+
+nos Estados, as parcelas entregues aos Municípios por determinação constitucional;
+
+### <a id="par-3-inc-2"></a>Inciso II
+
+nos Estados, no Distrito Federal e nos Municípios, a contribuição dos servidores para custeio do seu sistema de previdência e assistência social e as receitas provenientes da compensação financeira referida no § 9º do art. 201 da Constituição Federal.
+
+## <a id="par-4"></a>§ 4º
+
+As contas especiais de que tratam os §§ 1º e 2º serão administradas pelo Tribunal de Justiça local, para pagamento de precatórios expedidos pelos tribunais.
+
+## <a id="par-5"></a>§ 5º
+
+Os recursos depositados nas contas especiais de que tratam os §§ 1º e 2º deste artigo não poderão retornar para Estados, Distrito Federal e Municípios devedores.
+
+## <a id="par-6"></a>§ 6º
+
+Pelo menos 50% (cinquenta por cento) dos recursos de que tratam os §§ 1º e 2º deste artigo serão utilizados para pagamento de precatórios em ordem cronológica de apresentação, respeitadas as preferências definidas no § 1º, para os requisitórios do mesmo ano e no § 2º do art. 100, para requisitórios de todos os anos.
+
+## <a id="par-7"></a>§ 7º
+
+Nos casos em que não se possa estabelecer a precedência cronológica entre 2 (dois) precatórios, pagar-se-á primeiramente o precatório de menor valor.
+
+## <a id="par-8"></a>§ 8º
+
+A aplicação dos recursos restantes dependerá de opção a ser exercida por Estados, Distrito Federal e Municípios devedores, por ato do Poder Executivo, obedecendo à seguinte forma, que poderá ser aplicada isoladamente ou simultaneamente:
+
+### <a id="par-8-inc-1"></a>Inciso I
+
+destinados ao pagamento dos precatórios por meio do leilão;
+
+### <a id="par-8-inc-2"></a>Inciso II
+
+destinados a pagamento a vista de precatórios não quitados na forma do § 6° e do inciso I, em ordem única e crescente de valor por precatório;
+
+### <a id="par-8-inc-3"></a>Inciso III
+
+destinados a pagamento por acordo direto com os credores, na forma estabelecida por lei própria da entidade devedora, que poderá prever criação e forma de funcionamento de câmara de conciliação.
+
+## <a id="par-9"></a>§ 9º
+
+Os leilões de que trata o inciso I do § 8º deste artigo:
+
+### <a id="par-9-inc-1"></a>Inciso I
+
+serão realizados por meio de sistema eletrônico administrado por entidade autorizada pela Comissão de Valores Mobiliários ou pelo Banco Central do Brasil;
+
+### <a id="par-9-inc-2"></a>Inciso II
+
+admitirão a habilitação de precatórios, ou parcela de cada precatório indicada pelo seu detentor, em relação aos quais não esteja pendente, no âmbito do Poder Judiciário, recurso ou impugnação de qualquer natureza, permitida por iniciativa do Poder Executivo a compensação com débitos líquidos e certos, inscritos ou não em dívida ativa e constituídos contra devedor originário pela Fazenda Pública devedora até a data da expedição do precatório, ressalvados aqueles cuja exigibilidade esteja suspensa nos termos da legislação, ou que já tenham sido objeto de abatimento nos termos do § 9º do art. 100 da Constituição Federal;
+
+### <a id="par-9-inc-3"></a>Inciso III
+
+ocorrerão por meio de oferta pública a todos os credores habilitados pelo respectivo ente federativo devedor;
+
+### <a id="par-9-inc-4"></a>Inciso IV
+
+considerarão automaticamente habilitado o credor que satisfaça o que consta no inciso II;
+
+### <a id="par-9-inc-5"></a>Inciso V
+
+serão realizados tantas vezes quanto necessário em função do valor disponível;
+
+### <a id="par-9-inc-6"></a>Inciso VI
+
+a competição por parcela do valor total ocorrerá a critério do credor, com deságio sobre o valor desta;
+
+### <a id="par-9-inc-7"></a>Inciso VII
+
+ocorrerão na modalidade deságio, associado ao maior volume ofertado cumulado ou não com o maior percentual de deságio, pelo maior percentual de deságio, podendo ser fixado valor máximo por credor, ou por outro critério a ser definido em edital;
+
+### <a id="par-9-inc-8"></a>Inciso VIII
+
+o mecanismo de formação de preço constará nos editais publicados para cada leilão;
+
+### <a id="par-9-inc-9"></a>Inciso IX
+
+a quitação parcial dos precatórios será homologada pelo respectivo Tribunal que o expediu.
+
+## <a id="par-10"></a>§ 10
+
+No caso de não liberação tempestiva dos recursos de que tratam o inciso II do § 1º e os §§ 2º e 6º deste artigo:
+
+### <a id="par-10-inc-1"></a>Inciso I
+
+haverá o sequestro de quantia nas contas de Estados, Distrito Federal e Municípios devedores, por ordem do Presidente do Tribunal referido no § 4º, até o limite do valor não liberado;
+
+### <a id="par-10-inc-2"></a>Inciso II
+
+constituir-se-á, alternativamente, por ordem do Presidente do Tribunal requerido, em favor dos credores de precatórios, contra Estados, Distrito Federal e Municípios devedores, direito líquido e certo, autoaplicável e independentemente de regulamentação, à compensação automática com débitos líquidos lançados por esta contra aqueles, e, havendo saldo em favor do credor, o valor terá automaticamente poder liberatório do pagamento de tributos de Estados, Distrito Federal e Municípios devedores, até onde se compensarem;
+
+### <a id="par-10-inc-3"></a>Inciso III
+
+o chefe do Poder Executivo responderá na forma da legislação de responsabilidade fiscal e de improbidade administrativa;
+
+### <a id="par-10-inc-4"></a>Inciso IV
+
+enquanto perdurar a omissão, a entidade devedora:
+
+#### <a id="par-10-inc-4-al-a"></a>Alínea a
+
+não poderá contrair empréstimo externo ou interno;
+
+#### <a id="par-10-inc-4-al-b"></a>Alínea b
+
+ficará impedida de receber transferências voluntárias;
+
+### <a id="par-10-inc-5"></a>Inciso V
+
+a União reterá os repasses relativos ao Fundo de Participação dos Estados e do Distrito Federal e ao Fundo de Participação dos Municípios, e os depositará nas contas especiais referidas no § 1º, devendo sua utilização obedecer ao que prescreve o § 5º, ambos deste artigo.
+
+## <a id="par-11"></a>§ 11
+
+No caso de precatórios relativos a diversos credores, em litisconsórcio, admite-se o desmembramento do valor, realizado pelo Tribunal de origem do precatório, por credor, e, por este, a habilitação do valor total a que tem direito, não se aplicando, neste caso, a regra do § 3º do art. 100 da Constituição Federal.
+
+## <a id="par-12"></a>§ 12
+
+Se a lei a que se refere o § 4º do art. 100 não estiver publicada em até 180 (cento e oitenta) dias, contados da data de publicação desta Emenda Constitucional, será considerado, para os fins referidos, em relação a Estados, Distrito Federal e Municípios devedores, omissos na regulamentação, o valor de:
+
+### <a id="par-12-inc-1"></a>Inciso I
+
+40 (quarenta) salários mínimos para Estados e para o Distrito Federal;
+
+### <a id="par-12-inc-2"></a>Inciso II
+
+30 (trinta) salários mínimos para Municípios.
+
+## <a id="par-13"></a>§ 13
+
+Enquanto Estados, Distrito Federal e Municípios devedores estiverem realizando pagamentos de precatórios pelo regime especial, não poderão sofrer sequestro de valores, exceto no caso de não liberação tempestiva dos recursos de que tratam o inciso II do § 1º e o § 2º deste artigo.
+
+## <a id="par-14"></a>§ 14
+
+O regime especial de pagamento de precatório previsto no inciso I do § 1º vigorará enquanto o valor dos precatórios devidos for superior ao valor dos recursos vinculados, nos termos do § 2º, ambos deste artigo, ou pelo prazo fixo de até 15 (quinze) anos, no caso da opção prevista no inciso II do § 1º.
+
+## <a id="par-15"></a>§ 15
+
+Os precatórios parcelados na forma do art. 33 ou do art. 78 deste Ato das Disposições Constitucionais Transitórias e ainda pendentes de pagamento ingressarão no regime especial com o valor atualizado das parcelas não pagas relativas a cada precatório, bem como o saldo dos acordos judiciais e extrajudiciais.
+
+## <a id="par-16"></a>§ 16
+
+A partir de 1º de agosto de 2025, a atualização de valores de requisitórios expedidos contra os Estados, o Distrito Federal e os Municípios, a partir da sua expedição até o efetivo pagamento, será feita pela variação do Índice Nacional de Preços ao Consumidor Amplo (IPCA), e, para fins de compensação da mora, desde a expedição, incidirão juros simples de 2% a.a. (dois por cento ao ano), ficando excluída a incidência de juros compensatórios.
+
+## <a id="par-16-a"></a>§ 16-A
+
+Caso o índice de atualização e juros calculado nos termos do § 16 deste artigo represente valor superior à taxa referencial do Sistema Especial de Liquidação e de Custódia (Selic), esta deve ser aplicada em substituição àquele.
+
+## <a id="par-17"></a>§ 17
+
+O valor que exceder o limite previsto no § 2º do art. 100 da Constituição Federal será pago, durante a vigência do regime especial, na forma prevista nos §§ 6º e 7º ou nos incisos I, II e III do § 8° deste artigo, devendo os valores dispendidos para o atendimento do disposto no § 2º do art. 100 da Constituição Federal serem computados para efeito do § 6º deste artigo.
+
+## <a id="par-18"></a>§ 18
+
+Durante a vigência do regime especial a que se refere este artigo, gozarão também da preferência a que se refere o § 6º os titulares originais de precatórios que tenham completado 60 (sessenta) anos de idade até a data da promulgação desta Emenda Constitucional.

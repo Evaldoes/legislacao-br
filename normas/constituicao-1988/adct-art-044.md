@@ -1,0 +1,26 @@
+---
+id: constituicao-1988-adct-art-044
+norma: constituicao-1988
+artigo: "44"
+rotulo: Art. 44 do ADCT
+fonte: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm
+capturado_em: 2026-10-22
+revogado: false
+notas: []
+---
+
+# Art. 44 do ADCT
+
+As atuais empresas brasileiras titulares de autorização de pesquisa, concessão de lavra de recursos minerais e de aproveitamento dos potenciais de energia hidráulica em vigor terão quatro anos, a partir da promulgação da Constituição, para cumprir os requisitos do art. 176, § 1º.
+
+## <a id="par-1"></a>§ 1º
+
+Ressalvadas as disposições de interesse nacional previstas no texto constitucional, as empresas brasileiras ficarão dispensadas do cumprimento do disposto no art. 176, § 1º, desde que, no prazo de até quatro anos da data da promulgação da Constituição, tenham o produto de sua lavra e beneficiamento destinado a industrialização no território nacional, em seus próprios estabelecimentos ou em empresa industrial controladora ou controlada.
+
+## <a id="par-2"></a>§ 2º
+
+Ficarão também dispensadas do cumprimento do disposto no art. 176, § 1º, as empresas brasileiras titulares de concessão de energia hidráulica para uso em seu processo de industrialização.
+
+## <a id="par-3"></a>§ 3º
+
+As empresas brasileiras referidas no § 1º somente poderão ter autorizações de pesquisa e concessões de lavra ou potenciais de energia hidráulica, desde que a energia e o produto da lavra sejam utilizados nos respectivos processos industriais.
