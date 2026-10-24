@@ -72,11 +72,11 @@ O total da despesa do Poder Legislativo Municipal, incluídos os subsídios dos 
 
 ## <a id="par-1"></a>§ 1º
 
-o A Câmara Municipal não gastará mais de setenta por cento de sua receita com folha de pagamento, incluído o gasto com o subsídio de seus Vereadores.
+A Câmara Municipal não gastará mais de setenta por cento de sua receita com folha de pagamento, incluído o gasto com o subsídio de seus Vereadores.
 
 ## <a id="par-2"></a>§ 2º
 
-o Constitui crime de responsabilidade do Prefeito Municipal:
+Constitui crime de responsabilidade do Prefeito Municipal:
 
 ### <a id="par-2-inc-1"></a>Inciso I
 
@@ -92,4 +92,4 @@ enviá-lo a menor em relação à proporção fixada na Lei Orçamentária.
 
 ## <a id="par-3"></a>§ 3º
 
-o Constitui crime de responsabilidade do Presidente da Câmara Municipal o desrespeito ao § 1 o deste artigo.
+Constitui crime de responsabilidade do Presidente da Câmara Municipal o desrespeito ao § 1º deste artigo.
