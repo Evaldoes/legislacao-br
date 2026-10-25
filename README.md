@@ -322,9 +322,33 @@ Ideias do que construir:
 
 ---
 
+## ⚙️ Como o texto é gerado
+
+O texto não é digitado: ele é **capturado** do Planalto por um programa que está neste mesmo repositório, em [`ingestion/`](ingestion/). Qualquer pessoa pode rodar, conferir e melhorar.
+
+```bash
+npm install
+npm run ingest -- constituicao-1988 --out normas      # baixa do Planalto e atualiza normas/constituicao-1988
+npm test                                              # testes do parser
+```
+
+O programa:
+
+1. baixa a página oficial (que vem em ISO-8859-1) e separa os parágrafos;
+2. reconhece títulos, capítulos, seções, artigos, parágrafos, incisos e alíneas;
+3. remove os trechos **riscados** (revogados) e move as notas de alteração para o campo `notas`;
+4. escreve um arquivo por artigo, o `_norma.md` com o índice e o `preambulo.md`;
+5. **aborta** se encontrar artigos faltando na numeração ou dispositivos fora de lugar.
+
+Um arquivo só muda quando o **conteúdo** muda: capturar de novo uma lei que não mudou não altera nada, nem a data `capturado_em`. Assim, o histórico do Git mostra só as mudanças reais da lei.
+
+Para adicionar uma norma, crie `ingestion/laws/{pasta}.ts` com a URL do Planalto, a descrição e os marcadores de início e fim do texto (veja [`constituicao-1988.ts`](ingestion/laws/constituicao-1988.ts)) e registre em `ingestion/laws/index.ts`.
+
+---
+
 ## 🔍 Fidelidade e fonte
 
-- O texto é capturado **automaticamente** do [Portal da Legislação do Planalto](https://www.planalto.gov.br/legislacao), a publicação oficial consolidada do Governo Federal.
+- O texto é capturado **automaticamente** do [Portal da Legislação do Planalto](https://www.planalto.gov.br/legislacao), a publicação oficial consolidada do Governo Federal, pelo programa em [`ingestion/`](ingestion/).
 - Os trechos **revogados** (que aparecem riscados no site) são removidos. O texto **em vigor** é mantido.
 - As notas de alteração, como *"(Redação dada pela Emenda Constitucional nº 26, de 2000)"*, saem do corpo do texto e vão para o campo `notas`, indicando o dispositivo a que se referem.
 - **Este repositório não é uma publicação oficial.** Em caso de divergência, vale o texto publicado no Diário Oficial da União. Encontrou uma diferença? [Abra uma issue](../../issues).

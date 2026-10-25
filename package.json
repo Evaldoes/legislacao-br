@@ -1,0 +1,27 @@
+{
+  "name": "legislacao-br",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ferramentas que geram e validam a legislação federal brasileira em Markdown",
+  "license": "CC0-1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "ingest": "tsx ingestion/cli.ts"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "iconv-lite": "^0.6.3",
+    "yaml": "^2.9.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.7"
+  }
+}

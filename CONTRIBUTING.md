@@ -21,6 +21,19 @@ Abra uma issue com o nome e o número da norma (por exemplo, *"Lei nº 8.078/199
 - Melhorias na documentação (README, exemplos de uso) são sempre bem-vindas.
 - Um assunto por PR.
 
+## Ferramentas
+
+O texto é gerado pelo programa em `ingestion/` (Node 22 e TypeScript):
+
+```bash
+npm install
+npm test                                              # testes
+npm run typecheck
+npm run ingest -- constituicao-1988 --out normas      # captura do Planalto
+```
+
+Corrigiu algo no programa? Rode a captura de novo e inclua no mesmo pull request os arquivos de `normas/` que mudaram, com os testes. As mudanças no programa seguem o fluxo do [OpenSpec](openspec/) (proposta → specs → design → tarefas).
+
 ## Formato dos commits
 
 Atualizações de texto legal indicam a norma que causou a mudança:

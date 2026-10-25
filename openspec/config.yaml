@@ -1,0 +1,32 @@
+schema: spec-driven
+
+context: |
+  Produto: legislacao-br, repositório PÚBLICO (CC0) com a legislação federal
+  brasileira em vigor em Markdown + frontmatter YAML: uma pasta por norma em
+  normas/{tipo}-{número}-{ano}/, um arquivo por artigo, cada emenda um commit.
+  Também guarda as ferramentas que geram e validam esses arquivos a partir do
+  Portal da Legislação do Planalto. Usado pela API do Direito Fácil e por
+  qualquer pessoa (apps, pesquisa, IA).
+
+  Idioma: artefatos do OpenSpec, README, CONTRIBUTING e commits em português do
+  Brasil, com acentuação correta. CÓDIGO EM INGLÊS (identificadores, arquivos,
+  pastas, comentários, testes). Chaves do frontmatter e rótulos ("Inciso",
+  "Parágrafo único") são contrato público e ficam em português.
+
+  Regras do texto: o conteúdo é idêntico ao texto oficial em vigor; trechos
+  revogados saem; notas de alteração vão para o campo notas. Nunca editar o
+  texto à mão para "melhorar" a redação.
+
+  Stack: Node 22, TypeScript (strict), Vitest, tsx, cheerio, iconv-lite, yaml.
+  Automação: GitHub Actions.
+
+  Convenções:
+  - TDD: teste falhando antes do código de produção.
+  - Commits de texto legal: "{norma}: descrição" (ex.: "constituicao-1988:
+    atualiza art. 7º conforme EC 141/2026"); demais: tipo: descrição.
+
+rules:
+  proposal:
+    - Incluir seção "Fora do escopo".
+  tasks:
+    - Cada tarefa de lógica começa pelo teste que deve falhar.

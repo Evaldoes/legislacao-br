@@ -1,0 +1,3 @@
+node_modules/
+# Raw HTML downloaded by the ingestion (kept only locally, for debugging)
+ingestion/raw/
