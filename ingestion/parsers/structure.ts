@@ -247,7 +247,7 @@ export function buildStructure(blocks: string[], options: StructureOptions): Str
 
 // Short line without final punctuation followed by an article or heading.
 function isCaption(text: string, next: string | undefined): boolean {
-  if (!next || /[.;:,!?)\]]$/.test(text) || !/^\p{Lu}/u.test(text) || text.length > 80) return false;
+  if (!next || /[.;:,!?)\]]$/.test(text) || !/^\p{Lu}/u.test(text) || text.length > 120) return false;
   const following = classifyBlock(splitNotes(next).text).type;
   return following === "article" || LEVELS.includes(following as HeadingType);
 }

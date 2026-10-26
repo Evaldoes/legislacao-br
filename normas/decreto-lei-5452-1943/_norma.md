@@ -8,7 +8,7 @@ apelidos:
   - CLT
   - Decreto-Lei nº 5.452/1943
 fonte: https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm
-capturado_em: 2026-10-25
+capturado_em: 2026-10-26
 artigos:
   principal: 1027
 ---
