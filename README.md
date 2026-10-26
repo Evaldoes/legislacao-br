@@ -47,7 +47,7 @@ Este repositório resolve isso uma vez, para todo mundo:
 |---|---|---|---|
 | Constituição Federal de 1988 (inclui o ADCT) | `cf88` | [`normas/constituicao-1988/`](normas/constituicao-1988/_norma.md) | ✅ disponível (424 artigos) |
 | Consolidação das Leis do Trabalho (Decreto-Lei nº 5.452/1943) | `clt` | [`normas/decreto-lei-5452-1943/`](normas/decreto-lei-5452-1943/_norma.md) | ✅ disponível (1.027 artigos) |
-| Código de Defesa do Consumidor (Lei nº 8.078/1990) | `cdc` | `normas/lei-8078-1990/` | 📋 planejado |
+| Código de Defesa do Consumidor (Lei nº 8.078/1990) | `cdc` | [`normas/lei-8078-1990/`](normas/lei-8078-1990/_norma.md) | ✅ disponível (130 artigos) |
 | Estatuto da Criança e do Adolescente (Lei nº 8.069/1990) | `eca` | `normas/lei-8069-1990/` | 📋 planejado |
 | Lei de Benefícios da Previdência Social (Lei nº 8.213/1991) | — | `normas/lei-8213-1991/` | 📋 planejado |
 | Lei do Inquilinato (Lei nº 8.245/1991) | — | `normas/lei-8245-1991/` | 📋 planejado |

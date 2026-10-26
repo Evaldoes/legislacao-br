@@ -1,0 +1,73 @@
+---
+id: lei-8078-1990-art-104-a
+norma: lei-8078-1990
+artigo: 104-A
+rotulo: Art. 104-A
+hierarquia:
+  titulo: Título III – Da Defesa do Consumidor em Juízo
+  capitulo: Capítulo V – Da Conciliação no Superendividamento
+fonte: https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm
+capturado_em: 2026-10-25
+revogado: false
+notas:
+  - dispositivo: caput
+    texto: Incluído pela Lei nº 14.181, de 2021
+  - dispositivo: par-1
+    texto: Incluído pela Lei nº 14.181, de 2021
+  - dispositivo: par-2
+    texto: Incluído pela Lei nº 14.181, de 2021
+  - dispositivo: par-3
+    texto: Incluído pela Lei nº 14.181, de 2021
+  - dispositivo: par-4
+    texto: Incluído pela Lei nº 14.181, de 2021
+  - dispositivo: par-4-inc-1
+    texto: Incluído pela Lei nº 14.181, de 2021
+  - dispositivo: par-4-inc-2
+    texto: Incluído pela Lei nº 14.181, de 2021
+  - dispositivo: par-4-inc-3
+    texto: Incluído pela Lei nº 14.181, de 2021
+  - dispositivo: par-4-inc-4
+    texto: Incluído pela Lei nº 14.181, de 2021
+  - dispositivo: par-5
+    texto: Incluído pela Lei nº 14.181, de 2021
+---
+
+# Art. 104-A
+
+A requerimento do consumidor superendividado pessoa natural, o juiz poderá instaurar processo de repactuação de dívidas, com vistas à realização de audiência conciliatória, presidida por ele ou por conciliador credenciado no juízo, com a presença de todos os credores de dívidas previstas no art. 54-A deste Código, na qual o consumidor apresentará proposta de plano de pagamento com prazo máximo de 5 (cinco) anos, preservados o mínimo existencial, nos termos da regulamentação, e as garantias e as formas de pagamento originalmente pactuadas.
+
+## <a id="par-1"></a>§ 1º
+
+Excluem-se do processo de repactuação as dívidas, ainda que decorrentes de relações de consumo, oriundas de contratos celebrados dolosamente sem o propósito de realizar pagamento, bem como as dívidas provenientes de contratos de crédito com garantia real, de financiamentos imobiliários e de crédito rural.
+
+## <a id="par-2"></a>§ 2º
+
+O não comparecimento injustificado de qualquer credor, ou de seu procurador com poderes especiais e plenos para transigir, à audiência de conciliação de que trata o caput deste artigo acarretará a suspensão da exigibilidade do débito e a interrupção dos encargos da mora, bem como a sujeição compulsória ao plano de pagamento da dívida se o montante devido ao credor ausente for certo e conhecido pelo consumidor, devendo o pagamento a esse credor ser estipulado para ocorrer apenas após o pagamento aos credores presentes à audiência conciliatória.
+
+## <a id="par-3"></a>§ 3º
+
+No caso de conciliação, com qualquer credor, a sentença judicial que homologar o acordo descreverá o plano de pagamento da dívida e terá eficácia de título executivo e força de coisa julgada.
+
+## <a id="par-4"></a>§ 4º
+
+Constarão do plano de pagamento referido no § 3º deste artigo:
+
+### <a id="par-4-inc-1"></a>Inciso I
+
+medidas de dilação dos prazos de pagamento e de redução dos encargos da dívida ou da remuneração do fornecedor, entre outras destinadas a facilitar o pagamento da dívida;
+
+### <a id="par-4-inc-2"></a>Inciso II
+
+referência à suspensão ou à extinção das ações judiciais em curso;
+
+### <a id="par-4-inc-3"></a>Inciso III
+
+data a partir da qual será providenciada a exclusão do consumidor de bancos de dados e de cadastros de inadimplentes;
+
+### <a id="par-4-inc-4"></a>Inciso IV
+
+condicionamento de seus efeitos à abstenção, pelo consumidor, de condutas que importem no agravamento de sua situação de superendividamento.
+
+## <a id="par-5"></a>§ 5º
+
+O pedido do consumidor a que se refere o caput deste artigo não importará em declaração de insolvência civil e poderá ser repetido somente após decorrido o prazo de 2 (dois) anos, contado da liquidação das obrigações previstas no plano de pagamento homologado, sem prejuízo de eventual repactuação.
