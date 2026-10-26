@@ -181,4 +181,10 @@ describe("extractBlocks", () => {
       expect(extractBlocks(html)).toEqual([`§ 1º ${note}`]);
     });
   });
+
+  it("keeps the label of a provision whose repeal note lacks the closing parenthesis", () => {
+    const html = `<p><strike>Art. 233. Submeter criança a tortura:</strike> (Revogado pela Lei nº 9.455, de 7.4.1997</p>`;
+
+    expect(extractBlocks(html)).toEqual(["Art. 233. (Revogado pela Lei nº 9.455, de 7.4.1997"]);
+  });
 });

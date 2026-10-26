@@ -1,0 +1,103 @@
+---
+id: lei-8069-1990-art-070-a
+norma: lei-8069-1990
+artigo: 70-A
+rotulo: Art. 70-A
+hierarquia:
+  titulo: Título III – Da Prevenção
+  capitulo: Capítulo I – Disposições Gerais
+fonte: https://www.planalto.gov.br/ccivil_03/leis/l8069.htm
+capturado_em: 2026-10-26
+revogado: false
+notas:
+  - dispositivo: caput
+    texto: Incluído pela Lei nº 13.010, de 2014
+  - dispositivo: inc-1
+    texto: Incluído pela Lei nº 13.010, de 2014
+  - dispositivo: inc-2
+    texto: Redação dada pela Lei nº 15.280, de 2025
+  - dispositivo: inc-3
+    texto: Incluído pela Lei nº 13.010, de 2014
+  - dispositivo: inc-4
+    texto: Incluído pela Lei nº 13.010, de 2014
+  - dispositivo: inc-5
+    texto: Incluído pela Lei nº 13.010, de 2014
+  - dispositivo: inc-6
+    texto: Incluído pela Lei nº 13.010, de 2014
+  - dispositivo: inc-7
+    texto: Incluído pela Lei nº 14.344, de 2022 (Vigência)
+  - dispositivo: inc-8
+    texto: Incluído pela Lei nº 14.344, de 2022 (Vigência)
+  - dispositivo: inc-9
+    texto: Redação dada pela Lei nº 15.280, de 2025
+  - dispositivo: inc-10
+    texto: Incluído pela Lei nº 14.344, de 2022 (Vigência)
+  - dispositivo: inc-11
+    texto: Incluído pela Lei nº 14.344, de 2022 (Vigência)
+  - dispositivo: inc-12
+    texto: Incluído pela Lei nº 14.344, de 2022 (Vigência)
+  - dispositivo: inc-13
+    texto: Incluído pela Lei nº 14.344, de 2022 (Vigência)
+  - dispositivo: par-unico
+    texto: Incluído pela Lei nº 13.010, de 2014
+---
+
+# Art. 70-A
+
+A União, os Estados, o Distrito Federal e os Municípios deverão atuar de forma articulada na elaboração de políticas públicas e na execução de ações destinadas a coibir o uso de castigo físico ou de tratamento cruel ou degradante e difundir formas não violentas de educação de crianças e de adolescentes, tendo como principais ações:
+
+## <a id="inc-1"></a>Inciso I
+
+a promoção de campanhas educativas permanentes para a divulgação do direito da criança e do adolescente de serem educados e cuidados sem o uso de castigo físico ou de tratamento cruel ou degradante e dos instrumentos de proteção aos direitos humanos;
+
+## <a id="inc-2"></a>Inciso II
+
+a integração com os órgãos de segurança pública, do Poder Judiciário, do Ministério Público e da Defensoria Pública, com o Conselho Tutelar, com os Conselhos de Direitos da Criança e do Adolescente e com as entidades não governamentais que atuam na promoção, na proteção e na defesa dos direitos da criança e do adolescente;
+
+## <a id="inc-3"></a>Inciso III
+
+a formação continuada e a capacitação dos profissionais de saúde, educação e assistência social e dos demais agentes que atuam na promoção, proteção e defesa dos direitos da criança e do adolescente para o desenvolvimento das competências necessárias à prevenção, à identificação de evidências, ao diagnóstico e ao enfrentamento de todas as formas de violência contra a criança e o adolescente;
+
+## <a id="inc-4"></a>Inciso IV
+
+o apoio e o incentivo às práticas de resolução pacífica de conflitos que envolvam violência contra a criança e o adolescente;
+
+## <a id="inc-5"></a>Inciso V
+
+a inclusão, nas políticas públicas, de ações que visem a garantir os direitos da criança e do adolescente, desde a atenção pré-natal, e de atividades junto aos pais e responsáveis com o objetivo de promover a informação, a reflexão, o debate e a orientação sobre alternativas ao uso de castigo físico ou de tratamento cruel ou degradante no processo educativo;
+
+## <a id="inc-6"></a>Inciso VI
+
+a promoção de espaços intersetoriais locais para a articulação de ações e a elaboração de planos de atuação conjunta focados nas famílias em situação de violência, com participação de profissionais de saúde, de assistência social e de educação e de órgãos de promoção, proteção e defesa dos direitos da criança e do adolescente.
+
+## <a id="inc-7"></a>Inciso VII
+
+a promoção de estudos e pesquisas, de estatísticas e de outras informações relevantes às consequências e à frequência das formas de violência contra a criança e o adolescente para a sistematização de dados nacionalmente unificados e a avaliação periódica dos resultados das medidas adotadas;
+
+## <a id="inc-8"></a>Inciso VIII
+
+o respeito aos valores da dignidade da pessoa humana, de forma a coibir a violência, o tratamento cruel ou degradante e as formas violentas de educação, correção ou disciplina;
+
+## <a id="inc-9"></a>Inciso IX
+
+a promoção e a realização de campanhas educativas direcionadas ao público escolar, a entidades esportivas, a unidades de saúde, a conselhos tutelares, a organizações da sociedade civil, a centros culturais, a associações comunitárias e outros espaços públicos de convivência e à sociedade em geral, bem como a difusão desta Lei e dos instrumentos de proteção aos direitos humanos das crianças e dos adolescentes, incluídos os canais de denúncia existentes;
+
+## <a id="inc-10"></a>Inciso X
+
+a celebração de convênios, de protocolos, de ajustes, de termos e de outros instrumentos de promoção de parceria entre órgãos governamentais ou entre estes e entidades não governamentais, com o objetivo de implementar programas de erradicação da violência, de tratamento cruel ou degradante e de formas violentas de educação, correção ou disciplina;
+
+## <a id="inc-11"></a>Inciso XI
+
+a capacitação permanente das Polícias Civil e Militar, da Guarda Municipal, do Corpo de Bombeiros, dos profissionais nas escolas, dos Conselhos Tutelares e dos profissionais pertencentes aos órgãos e às áreas referidos no inciso II deste caput, para que identifiquem situações em que crianças e adolescentes vivenciam violência e agressões no âmbito familiar ou institucional;
+
+## <a id="inc-12"></a>Inciso XII
+
+a promoção de programas educacionais que disseminem valores éticos de irrestrito respeito à dignidade da pessoa humana, bem como de programas de fortalecimento da parentalidade positiva, da educação sem castigos físicos e de ações de prevenção e enfrentamento da violência doméstica e familiar contra a criança e o adolescente;
+
+## <a id="inc-13"></a>Inciso XIII
+
+o destaque, nos currículos escolares de todos os níveis de ensino, dos conteúdos relativos à prevenção, à identificação e à resposta à violência doméstica e familiar.
+
+## <a id="par-unico"></a>Parágrafo único
+
+As famílias com crianças e adolescentes com deficiência terão prioridade de atendimento nas ações e políticas públicas de prevenção e proteção.

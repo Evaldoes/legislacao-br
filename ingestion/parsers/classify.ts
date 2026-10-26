@@ -46,9 +46,13 @@ const hasContent = (text: string, minimum = 1) => (text.match(/[\p{L}\p{N}]/gu) 
 // Roman numeral typed with a lowercase L for I ("Il - colaborar").
 const ROMAN_TYPO = /^([IVXLC]*l[IVXLCl]*)(?=\s*[-–—])/;
 
+// Suffix written apart from its number: "§ 2º -A. O prazo".
+const DETACHED_SUFFIX = /^((?:Art\.?|§)\s*\d+\s*[º°]?)\s+-([A-Z])\./u;
+
 export function classifyBlock(input: string): Block {
   const block = input
     .replace(TRAILING_LINKS, "")
+    .replace(DETACHED_SUFFIX, "$1-$2.")
     .replace(ROMAN_TYPO, (numeral) => numeral.replaceAll("l", "I"));
   const b = classifyProvision(block);
 

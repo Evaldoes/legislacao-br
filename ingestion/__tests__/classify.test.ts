@@ -128,4 +128,8 @@ describe("classifyBlock", () => {
   it("reads a heading written without accents", () => {
     expect(classifyBlock("CAPITULO VII")).toEqual({ type: "chapter", number: "VII", name: "" });
   });
+
+  it("reads a suffix written apart from its number", () => {
+    expect(classifyBlock("§ 2º -A. O prazo máximo")).toEqual({ type: "paragraph", number: "2-A", text: "O prazo máximo" });
+  });
 });

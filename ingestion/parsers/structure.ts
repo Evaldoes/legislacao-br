@@ -37,6 +37,9 @@ export type StructuredLaw = {
 
 const LEVELS: HeadingType[] = ["title", "chapter", "section", "subsection"];
 
+// Item of an article that amends another law: "1) Art. 121 ......".
+const QUOTED_ARTICLE = /^\d+\)\s*Art\.?\s*\d/;
+
 const HEADING_LABELS: Record<HeadingType, string> = {
   title: "Título",
   chapter: "Capítulo",
@@ -56,6 +59,9 @@ export function buildStructure(blocks: string[], options: StructureOptions): Str
   let unnamedHeading: HeadingType | null = null;
   // Last heading while no article has started under it.
   let openHeading: HeadingType | null = null;
+  // Inside an article that quotes another law ("1) Art. 121 ..."): its
+  // provisions are text of the quoting article, not provisions of this law.
+  let quoting = false;
   let article: Article | null = null;
   let paragraph: Provision | null = null;
   let clause: Provision | null = null;
@@ -132,6 +138,16 @@ export function buildStructure(blocks: string[], options: StructureOptions): Str
     const empty = b.type !== "residue" && "text" in b && !b.text && notes.length === 0;
     if (b.type === "residue" || (empty && b.type !== "article")) continue;
 
+    if (quoting && article && (b.type === "paragraph" || b.type === "clause" || b.type === "subclause" || b.type === "text")) {
+      article.caput.push(text);
+      continue;
+    }
+    if (b.type === "text" && article && QUOTED_ARTICLE.test(b.text)) {
+      quoting = true;
+      article.caput.push(text);
+      continue;
+    }
+
     switch (b.type) {
       case "title":
       case "chapter":
@@ -164,6 +180,7 @@ export function buildStructure(blocks: string[], options: StructureOptions): Str
         paragraph = clause = null;
         target = { text: created.caput, notes: created.notes };
         unnamedHeading = openHeading = null;
+        quoting = false;
         continue;
       }
 

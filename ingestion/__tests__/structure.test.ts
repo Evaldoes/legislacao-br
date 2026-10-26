@@ -257,6 +257,27 @@ describe("buildStructure", () => {
     expect(law.articles[0]!.caput).toEqual(["Entre 2 jornadas haverá descanso."]);
   });
 
+  it("keeps the articles another law quotes as text of the quoting article", () => {
+    const law = buildStructure(
+      [
+        "PREÂMBULO",
+        "Art. 263. O Código Penal passa a vigorar com as seguintes alterações:",
+        "1) Art. 121 ......",
+        "§ 4º No homicídio culposo, a pena é aumentada.",
+        "Art. 264. Texto.",
+      ],
+      options,
+    );
+
+    expect(law.articles[0]!.children).toEqual([]);
+    expect(law.articles[0]!.caput).toEqual([
+      "O Código Penal passa a vigorar com as seguintes alterações:",
+      "1) Art. 121 ......",
+      "§ 4º No homicídio culposo, a pena é aumentada.",
+    ]);
+    expect(law.articles[1]!.number).toBe("264");
+  });
+
   describe("provisions listed twice", () => {
     const paragraphs = (blocks: string[]) =>
       buildStructure(["PREÂMBULO", "Art. 634 - Texto.", ...blocks], options);

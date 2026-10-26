@@ -43,3 +43,10 @@ Texto marcado pelo Planalto com "Vigência encerrada" MUST NOT aparecer na norma
 - **WHEN** um dispositivo em vigor traz a nota "(Revogado pela Medida Provisória nº 905, de 2019) (Vigência encerrada)"
 - **THEN** o dispositivo continua com o seu texto e sem essa nota
 
+### Requirement: Capturar o ECA
+A ferramenta MUST capturar o ECA (Lei nº 8.069/1990) na pasta `normas/lei-8069-1990/`, sem avisos nem lacunas, mantendo como texto do artigo que altera outra lei os artigos e parágrafos citados dessa outra lei.
+
+#### Scenario: Artigo que altera o Código Penal
+- **WHEN** a captura encontra o Art. 263 do ECA, que cita artigos do Código Penal
+- **THEN** os trechos citados ficam no texto do Art. 263 e não viram parágrafos do ECA
+

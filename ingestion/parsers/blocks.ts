@@ -6,8 +6,9 @@ const BREAK = " ";
 const BLOCK_ELEMENTS = "p, div, tr, li, h1, h2, h3, h4, h5, h6, center, blockquote";
 
 // A paragraph whose only non-struck content is notes, one of them a repeal
-// note, sometimes followed by loose links ("(Revogado ...) Vigência").
-const ONLY_NOTES = /^[\s.;,]*(?:(?:\([^()]*\)|Vigência|Regulamento|Produção de efeitos?)[\s.;,]*)+$/u;
+// note, sometimes followed by loose links ("(Revogado ...) Vigência"); the
+// last note may lack its closing parenthesis.
+const ONLY_NOTES = /^[\s.;,]*(?:(?:\([^()]*\)|Vigência|Regulamento|Produção de efeitos?)[\s.;,]*)*(?:\([^()]*)?$/u;
 const REPEAL = /\((?:Revogad|Suprimid)/u;
 const isOnlyNotes = (text: string) => !text.trim() || ONLY_NOTES.test(text);
 
