@@ -5,7 +5,7 @@
 **A legislação federal brasileira em Markdown, versionada com Git.**
 **Cada artigo é um arquivo. Cada emenda é um commit.**
 
-[![Validação](https://github.com/Evaldoes/legislacao-br/actions/workflows/ci.yml/badge.svg)](https://github.com/Evaldoes/legislacao-br/actions/workflows/ci.yml)
+[![CI](https://github.com/Evaldoes/legislacao-br/actions/workflows/ci.yml/badge.svg)](https://github.com/Evaldoes/legislacao-br/actions/workflows/ci.yml)
 [![Licença: CC0-1.0](https://img.shields.io/badge/licen%C3%A7a-CC0%201.0-lightgrey.svg)](LICENSE)
 [![PRs bem-vindos](https://img.shields.io/badge/PRs-bem--vindos-brightgreen.svg)](CONTRIBUTING.md)
 [![Formato: Markdown + YAML](https://img.shields.io/badge/formato-Markdown%20%2B%20YAML-blue.svg)](#-formato-dos-arquivos)

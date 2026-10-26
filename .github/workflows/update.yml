@@ -1,8 +1,8 @@
-name: Atualização do Planalto
+name: Planalto update
 
 on:
   schedule:
-    # Toda segunda-feira, 9h de Brasília (12h UTC).
+    # Every Monday, 9h Brasília time (12h UTC).
     - cron: "0 12 * * 1"
   workflow_dispatch:
 
@@ -11,12 +11,12 @@ permissions:
   pull-requests: write
 
 concurrency:
-  group: atualizacao-planalto
+  group: planalto-update
   cancel-in-progress: false
 
 jobs:
-  capturar:
-    name: Capturar e propor mudanças
+  ingest:
+    name: Ingest and propose changes
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -25,18 +25,18 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - name: Capturar todas as normas
+      - name: Ingest all laws
         run: npm run ingest:all
-      - name: Validar o formato
+      - name: Validate the format
         run: npm run check
-      - name: Descrever as mudanças
+      - name: Describe the changes
         id: changes
         run: npm run describe-changes
-      - name: Abrir ou atualizar o pull request
+      - name: Open or update the pull request
         if: steps.changes.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@v7
         with:
-          branch: atualizacao/planalto
+          branch: update/planalto
           commit-message: ${{ steps.changes.outputs.title }}
           title: ${{ steps.changes.outputs.title }}
           body: ${{ steps.changes.outputs.body }}

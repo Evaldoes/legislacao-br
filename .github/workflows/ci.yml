@@ -1,4 +1,4 @@
-name: Validação
+name: CI
 
 on:
   push:
@@ -6,8 +6,8 @@ on:
   pull_request:
 
 jobs:
-  validar:
-    name: Testes, tipos e formato
+  validate:
+    name: Tests, types and format
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
