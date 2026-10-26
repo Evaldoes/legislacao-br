@@ -7,7 +7,7 @@
 ## 2. Automação
 
 - [x] 2.1 Workflow `atualizacao.yml` (segunda-feira e sob demanda) com pull request
-- [ ] 2.2 Permitir pull requests do Actions no repositório (configuração pelo dono); [x] README
+- [x] 2.2 Permitir pull requests do Actions no repositório (configuração pelo dono); [x] README
 
 ## 3. Conferência
 
