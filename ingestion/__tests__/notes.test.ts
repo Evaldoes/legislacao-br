@@ -113,4 +113,18 @@ describe("splitNotes", () => {
   ])("recognizes a note that starts with the provision label: %s", (note) => {
     expect(splitNotes(`Texto do parágrafo. ${note}`)).toEqual({ text: "Texto do parágrafo.", notes: [note.slice(1, -1)] });
   });
+
+  it("accepts a final note missing its closing parenthesis", () => {
+    expect(splitNotes("(Redação dada pelo Decreto-lei nº 1.535, de 13.4.1977")).toEqual({
+      text: "",
+      notes: ["Redação dada pelo Decreto-lei nº 1.535, de 13.4.1977"],
+    });
+  });
+
+  it("splits a suppression note", () => {
+    expect(splitNotes("Art. 691 (Suprimido pelo Decreto-lei nº 8.737, de 19.1.1946)")).toEqual({
+      text: "Art. 691",
+      notes: ["Suprimido pelo Decreto-lei nº 8.737, de 19.1.1946"],
+    });
+  });
 });

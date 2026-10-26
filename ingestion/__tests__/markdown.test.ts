@@ -185,4 +185,23 @@ describe("articleToMarkdown", () => {
     expect(frontmatter(md)).not.toHaveProperty("hierarquia");
     expect(frontmatter(md).id).toBe("constituicao-1988-adct-art-001");
   });
+
+  it("marks as repealed an article struck without a repeal note", () => {
+    const md = articleToMarkdown(
+      article({
+        number: "88",
+        children: [{ type: "paragraph", number: "2", text: [], notes: ["Revogado pela Lei nº 4.589, de 1964"], children: [] }],
+      }),
+      meta,
+    );
+
+    expect(frontmatter(md).revogado).toBe(true);
+    expect(body(md)).toContain("# Art. 88\n\n*(Revogado)*");
+  });
+
+  it("treats a suppression note as a repeal", () => {
+    const md = articleToMarkdown(article({ number: "691", notes: ["Suprimido pelo Decreto-lei nº 8.737, de 1946"] }), meta);
+
+    expect(frontmatter(md).revogado).toBe(true);
+  });
 });

@@ -54,6 +54,8 @@ export function buildStructure(blocks: string[], options: StructureOptions): Str
   let part: string | null = null;
   let hierarchy: Hierarchy = {};
   let unnamedHeading: HeadingType | null = null;
+  // Last heading while no article has started under it.
+  let openHeading: HeadingType | null = null;
   let article: Article | null = null;
   let paragraph: Provision | null = null;
   let clause: Provision | null = null;
@@ -71,9 +73,9 @@ export function buildStructure(blocks: string[], options: StructureOptions): Str
     children: [],
   });
 
-  // Adds a provision to its parent. Planalto sometimes lists a repealed
-  // provision twice (the struck original, whose label is kept, and an explicit
-  // "(Revogado)" line); both become one, with the notes of both.
+  // Adds a provision to its parent. Planalto sometimes lists a provision twice
+  // (the struck original, whose label is kept, and an explicit "(Revogado)"
+  // line; or an old repeal next to the version in force); they become one.
   const attach = (owner: Article, parent: { children: Provision[] }, created: Provision): Provision => {
     const existing = parent.children.find((c) => c.type === created.type && c.number === created.number);
     let attached = created;
@@ -82,6 +84,13 @@ export function buildStructure(blocks: string[], options: StructureOptions): Str
     } else if (existing.text.length === 0 && created.text.length === 0) {
       for (const note of created.notes) if (!existing.notes.includes(note)) existing.notes.push(note);
       attached = existing;
+    } else if (created.text.length === 0 || existing.text.join("\n") === created.text.join("\n")) {
+      // The repeal of an older version of a provision now in force, or the
+      // same text listed twice: the provision in force stands.
+      attached = existing;
+    } else if (existing.text.length === 0) {
+      // A repealed provision restored later.
+      parent.children[parent.children.indexOf(existing)] = created;
     } else {
       law.warnings.push(`duplicate provision: ${owner.part} ${owner.number} ${created.type} ${created.number}`);
       parent.children.push(created);
@@ -132,6 +141,7 @@ export function buildStructure(blocks: string[], options: StructureOptions): Str
         const label = `${HEADING_LABELS[b.type]} ${b.number}`;
         hierarchy[b.type] = b.name ? `${label} – ${readableName(b.name)}` : label;
         unnamedHeading = b.name ? null : b.type;
+        openHeading = b.type;
         closeArticle();
         continue;
       }
@@ -153,7 +163,7 @@ export function buildStructure(blocks: string[], options: StructureOptions): Str
         article = created;
         paragraph = clause = null;
         target = { text: created.caput, notes: created.notes };
-        unnamedHeading = null;
+        unnamedHeading = openHeading = null;
         continue;
       }
 
@@ -191,6 +201,13 @@ export function buildStructure(blocks: string[], options: StructureOptions): Str
         if (unnamedHeading) {
           hierarchy[unnamedHeading] += ` – ${readableName(b.text)}`;
           unnamedHeading = null;
+        } else if (openHeading && !target) {
+          // A heading name broken in two lines ("Do Incidente de
+          // Desconsideração da" / "Personalidade Jurídica") continues;
+          // a loose caption under a named heading ("Alimentação") is
+          // not part of the law's structure and is dropped.
+          const name = hierarchy[openHeading] ?? "";
+          if (continuesName(name, b.text)) hierarchy[openHeading] = `${name} ${readableName(b.text, true)}`;
         } else if (target) {
           target.text.push(b.text);
           target.notes.push(...notes);
@@ -207,19 +224,24 @@ export function buildStructure(blocks: string[], options: StructureOptions): Str
   return law;
 }
 
+function continuesName(name: string, text: string): boolean {
+  const last = name.split(" ").at(-1)?.toLowerCase() ?? "";
+  return PARTICLES.has(last) || (text === text.toUpperCase() && /\p{L}/u.test(text));
+}
+
 const PARTICLES = new Set(
   "a à ao aos as às com da das de do dos e em entre na nas no nos o os ou para pela pelas pelo pelos por".split(" "),
 );
 
 /** Converts all-caps names ("DA SAÚDE") to the style used in the text itself ("Da Saúde"). */
-export function readableName(name: string): string {
+export function readableName(name: string, continuing = false): string {
   if (name !== name.toUpperCase()) return name;
 
   return name
     .toLowerCase()
     .split(" ")
     .map((word, i) =>
-      i > 0 && PARTICLES.has(word)
+      (i > 0 || continuing) && PARTICLES.has(word)
         ? word
         : word
             .split("-")

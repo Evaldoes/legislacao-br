@@ -12,13 +12,14 @@ export type Block =
   | { type: "text"; text: string }
   | { type: "residue" };
 
-// Suffix of articles/paragraphs/clauses added by amendment: "29-A", "4º-A".
-// Always attached; with spaces it is a separator ("§ 10 - O mandato").
-const SUFFIX = String.raw`(?:-([A-Z])(?![a-zà-ú]))?`;
+// Suffix of articles/paragraphs/clauses added by amendment: "29-A", "4º-A",
+// sometimes without the hyphen ("401A"). Always attached; with spaces it is
+// a separator ("§ 10 - O mandato").
+const SUFFIX = String.raw`(?:-?([A-Z])(?![a-zà-ú]))?`;
 const ORDINAL = String.raw`(?:\s*\.?\s*[º°])?`;
 const SEPARATOR = String.raw`\s*[.\-–—]?\s*`;
 
-const ARTICLE = new RegExp(String.raw`^Art\.?\s*(\d+)${ORDINAL}${SUFFIX}${SEPARATOR}(.*)$`, "su");
+const ARTICLE = new RegExp(String.raw`^Art\.?(?:\s*\.)?\s*(\d+)${ORDINAL}${SUFFIX}${SEPARATOR}(.*)$`, "su");
 const PARAGRAPH = new RegExp(String.raw`^§\s*(\d+)${ORDINAL}${SUFFIX}${SEPARATOR}(.*)$`, "su");
 const SOLE_PARAGRAPH = /^Parágrafo\s+único\s*[.\-–—:]?\s*(.*)$/isu;
 const CLAUSE = /^([IVXLCDM]+)(?:-([A-Z])(?![a-zà-ú]))?(?:\s*[-–—]\s*|\s+)(.*)$/su;
@@ -41,8 +42,13 @@ const withSuffix = (number: string, letter?: string) => (letter ? `${number}-${l
 
 const hasContent = (text: string, minimum = 1) => (text.match(/[\p{L}\p{N}]/gu) ?? []).length >= minimum;
 
+// Roman numeral typed with a lowercase L for I ("Il - colaborar").
+const ROMAN_TYPO = /^([IVXLC]*l[IVXLCl]*)(?=\s*[-–—])/;
+
 export function classifyBlock(input: string): Block {
-  const block = input.replace(TRAILING_LINKS, "");
+  const block = input
+    .replace(TRAILING_LINKS, "")
+    .replace(ROMAN_TYPO, (numeral) => numeral.replaceAll("l", "I"));
   const b = classifyProvision(block);
 
   // Leftovers of struck text removed halfway, such as a lone ".".

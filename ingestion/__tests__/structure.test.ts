@@ -208,6 +208,76 @@ describe("buildStructure", () => {
 
     expect(law.warnings).toContain("duplicate article: principal 1");
   });
+
+  describe("lines right after a heading", () => {
+    it("continues a heading name broken in two lines", () => {
+      const law = buildStructure(
+        ["PREÂMBULO", "Seção IV", "Do Incidente de Desconsideração da", "Personalidade Jurídica", "Art. 855-A. Texto."],
+        options,
+      );
+
+      expect(law.articles[0]!.hierarchy.section).toBe("Seção IV – Do Incidente de Desconsideração da Personalidade Jurídica");
+      expect(law.warnings).toEqual([]);
+    });
+
+    it("continues a heading name with an all-caps line", () => {
+      const law = buildStructure(
+        [
+          "PREÂMBULO",
+          "CAPÍTULO III-A",
+          "DO PROCESSO DE JURISDIÇÃO VOLUNTÁRIA",
+          "PARA HOMOLOGAÇÃO DE ACORDO EXTRAJUDICIAL",
+          "Art. 855-B. Texto.",
+        ],
+        options,
+      );
+
+      expect(law.articles[0]!.hierarchy.chapter).toBe(
+        "Capítulo III-A – Do Processo de Jurisdição Voluntária para Homologação de Acordo Extrajudicial",
+      );
+    });
+
+    it("drops a loose caption under a named heading", () => {
+      const law = buildStructure(
+        ["PREÂMBULO", "CAPÍTULO II", "DA REMUNERAÇÃO", "Alimentação", "Art. 457 - Texto."],
+        options,
+      );
+
+      expect(law.articles[0]!.hierarchy.chapter).toBe("Capítulo II – Da Remuneração");
+      expect(law.warnings).toEqual([]);
+    });
+  });
+
+  describe("provisions listed twice", () => {
+    const paragraphs = (blocks: string[]) =>
+      buildStructure(["PREÂMBULO", "Art. 634 - Texto.", ...blocks], options);
+
+    it("keeps the provision in force over the repeal of an older version", () => {
+      const law = paragraphs(["§ 1º Texto em vigor.", "§ 1º (Revogado pelo Decreto-lei nº 8.740, de 1946)"]);
+
+      expect(law.articles[0]!.children).toMatchObject([{ number: "1", text: ["Texto em vigor."], notes: [] }]);
+      expect(law.warnings).toEqual([]);
+    });
+
+    it("merges the same text listed twice", () => {
+      const law = paragraphs(["Parágrafo único - Texto.", "Parágrafo único - Texto."]);
+
+      expect(law.articles[0]!.children).toHaveLength(1);
+      expect(law.warnings).toEqual([]);
+    });
+
+    it("replaces a repealed provision restored later", () => {
+      const law = paragraphs(["§ 2º (Revogado pela Lei nº 1, de 1950)", "§ 2º Texto restaurado."]);
+
+      expect(law.articles[0]!.children).toMatchObject([{ number: "2", text: ["Texto restaurado."] }]);
+    });
+
+    it("still warns about two different texts in force", () => {
+      const law = paragraphs(["§ 1º Um texto.", "§ 1º Outro texto."]);
+
+      expect(law.warnings).toEqual(["duplicate provision: principal 634 paragraph 1"]);
+    });
+  });
 });
 
 describe("readableName", () => {

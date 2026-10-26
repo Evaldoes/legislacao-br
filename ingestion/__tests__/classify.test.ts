@@ -113,4 +113,15 @@ describe("classifyBlock", () => {
       text: "Dos Princípios Fundamentais",
     });
   });
+
+  describe("Planalto typos", () => {
+    it.each([
+      ["Art. . 154 - A observância", { type: "article", number: "154", text: "A observância" }],
+      ["Art. 401A. (VETADO)", { type: "article", number: "401-A", text: "(VETADO)" }],
+      ["Art. 11 -O direito de ação", { type: "article", number: "11", text: "O direito de ação" }],
+      ["Il - colaborar com a empresa", { type: "clause", number: "II", text: "colaborar com a empresa" }],
+    ])("%s", (block, expected) => {
+      expect(classifyBlock(block)).toEqual(expected);
+    });
+  });
 });

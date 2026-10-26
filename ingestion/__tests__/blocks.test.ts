@@ -92,4 +92,93 @@ describe("extractBlocks", () => {
 
     expect(extractBlocks(html)).toEqual(["texto"]);
   });
+
+  describe("provisional measures with lapsed validity", () => {
+    it("drops text struck by a measure that lapsed", () => {
+      const html = `<p><strike>Art. 12-A. Fica autorizado (Incluído pela Medida Provisória nº 905, de 2019)</strike>
+        <a>(Vigência encerrada)</a></p><p>Art. 13 Texto em vigor.</p>`;
+
+      expect(extractBlocks(html)).toEqual(["Art. 13 Texto em vigor."]);
+    });
+
+    it("keeps the text in force without the lapsed measure's note", () => {
+      const html = `<p>§ 1º Texto em vigor. (Revogado pela Medida Provisória nº 905, de 2019) (Vigência encerrada)</p>`;
+
+      expect(extractBlocks(html)).toEqual(["§ 1º Texto em vigor."]);
+    });
+
+    it("handles notes wrapped in an extra pair of parentheses", () => {
+      const html = `<p>Art. 557 - Texto. ((Revogado pela Medida Provisória nº 905, de 2019) (Vigência encerrada))</p>`;
+
+      expect(extractBlocks(html)).toEqual(["Art. 557 - Texto."]);
+    });
+  });
+
+  describe("articles struck in full", () => {
+    it("keeps the label of an article struck without a note and without another version", () => {
+      const html = `<p>Art. 87 - Texto.</p><p><strike>Art. 88 - Texto antigo</strike></p>
+        <p><strike>§ 1º Texto antigo</strike></p><p>Art. 89 - Texto.</p>`;
+
+      expect(extractBlocks(html)).toEqual(["Art. 87 - Texto.", "Art. 88", "Art. 89 - Texto."]);
+    });
+
+    it("drops every version struck without a note except the last one", () => {
+      const html = `<p><strike>Art. 18. Versão 1</strike></p><p><strike>Art. 18 Versão 2</strike></p>
+        <p><strike>Art. 18 - Versão 3</strike> (Revogado pela Lei nº 7.855, de 1989)</p>`;
+
+      expect(extractBlocks(html)).toEqual(["Art. 18 (Revogado pela Lei nº 7.855, de 1989)"]);
+    });
+
+    it("drops a struck version whose number is a typo out of sequence", () => {
+      const html = `<p>Art. 669 - Texto.</p><p><strike>Art. 670. Versão antiga</strike></p>
+        <p><strike>Art. 60. Outra versão antiga</strike></p><p>Art. 670 - Texto em vigor.</p>`;
+
+      expect(extractBlocks(html)).toEqual(["Art. 669 - Texto.", "Art. 670 - Texto em vigor."]);
+    });
+
+    it("drops the repeal of an article restored later", () => {
+      const html = `<p><strike>Art. 500. Texto</strike> (Revogado pela Lei nº 5.562, de 1968)</p>
+        <p>Art. 500 - Texto restaurado.</p>`;
+
+      expect(extractBlocks(html)).toEqual(["Art. 500 - Texto restaurado."]);
+    });
+
+    it("drops repealed provisions of a superseded version", () => {
+      const html = `<p><strike>Art. 708. Versão antiga</strike></p>
+        <p><strike>a) texto antigo</strike> (Revogado pela Lei nº 14.824, de 2024)</p>
+        <p>Art. 708. Texto em vigor.</p>`;
+
+      expect(extractBlocks(html)).toEqual(["Art. 708. Texto em vigor."]);
+    });
+  });
+
+  describe("Planalto typos around struck text", () => {
+    it("joins the first letter left outside the strike", () => {
+      const html = `<p>A<strike>rt. 28. Texto antigo</strike> (Revogado pela Lei nº 7.855, de 1989)</p>`;
+
+      expect(extractBlocks(html)).toEqual(["Art. 28. (Revogado pela Lei nº 7.855, de 1989)"]);
+    });
+
+    it("drops the end of a struck note left outside the strike", () => {
+      const html = `<p><strike>a) texto (Redação dada pelo Decreto-lei nº 8.740, de 1946,</strike>
+        com vigência suspensa pelo Decreto-lei nº 8.987-A, de 1946)</p>`;
+
+      expect(extractBlocks(html)).toEqual([]);
+    });
+
+    it("does not read a following capital letter as an article suffix", () => {
+      const html = `<p><strike>Art. 46 -A renda proveniente</strike> (Revogado pelo Decreto-Lei nº 229, de 1967)</p>`;
+
+      expect(extractBlocks(html)).toEqual(["Art. 46 (Revogado pelo Decreto-Lei nº 229, de 1967)"]);
+    });
+
+    it.each([
+      ["(Suprimido pelo Decreto-lei nº 8.737, de 1946)"],
+      ["(Revogado pela Lei nº 12.010, de 2009) Vigência"],
+    ])("keeps the label of a provision repealed with %s", (note) => {
+      const html = `<p><strike>§ 1º Texto antigo</strike> ${note}</p>`;
+
+      expect(extractBlocks(html)).toEqual([`§ 1º ${note}`]);
+    });
+  });
 });

@@ -61,7 +61,9 @@ function anchor(p: Provision, parent?: string): string {
   return parent ? `${parent}-${own}` : own;
 }
 
-const isRepeal = (note: string) => /^Revogad[oa]/i.test(note);
+const isRepeal = (note: string) => /^(?:Revogad|Suprimid)[oa]/i.test(note);
+
+const inForce = (p: Provision): boolean => p.text.length > 0 || p.children.some(inForce);
 
 const paragraphs = (text: string[]) => (text.length ? text : ["*(Revogado)*"]);
 
@@ -72,7 +74,9 @@ export function articleToMarkdown(article: Article, meta: LawMeta): string {
   }));
   const lines = ["", `# ${articleLabel(article)}`, ""];
 
-  const repealed = article.caput.length === 0 && article.notes.some(isRepeal);
+  // Planalto sometimes strikes a whole article without a repeal note.
+  const repealed =
+    article.caput.length === 0 && (article.notes.some(isRepeal) || !article.children.some(inForce));
   if (article.caput.length || repealed) {
     for (const p of paragraphs(article.caput)) lines.push(p, "");
   }
