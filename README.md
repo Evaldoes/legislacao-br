@@ -50,7 +50,7 @@ Este repositório resolve isso uma vez, para todo mundo:
 | Código de Defesa do Consumidor (Lei nº 8.078/1990) | `cdc` | [`normas/lei-8078-1990/`](normas/lei-8078-1990/_norma.md) | ✅ disponível (130 artigos) |
 | Estatuto da Criança e do Adolescente (Lei nº 8.069/1990) | `eca` | [`normas/lei-8069-1990/`](normas/lei-8069-1990/_norma.md) | ✅ disponível (329 artigos) |
 | Lei de Benefícios da Previdência Social (Lei nº 8.213/1991) | — | `normas/lei-8213-1991/` | 📋 planejado |
-| Lei do Inquilinato (Lei nº 8.245/1991) | — | `normas/lei-8245-1991/` | 📋 planejado |
+| Lei do Inquilinato (Lei nº 8.245/1991) | `inquilinato` | [`normas/lei-8245-1991/`](normas/lei-8245-1991/_norma.md) | ✅ disponível (91 artigos) |
 | Código Civil (Lei nº 10.406/2002) | `cc` | `normas/lei-10406-2002/` | 📋 planejado |
 | Código Penal (Decreto-Lei nº 2.848/1940) | `cp` | `normas/decreto-lei-2848-1940/` | 📋 planejado |
 | Código de Trânsito Brasileiro (Lei nº 9.503/1997) | `ctb` | `normas/lei-9503-1997/` | 📋 planejado |

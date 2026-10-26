@@ -50,3 +50,10 @@ A ferramenta MUST capturar o ECA (Lei nº 8.069/1990) na pasta `normas/lei-8069-
 - **WHEN** a captura encontra o Art. 263 do ECA, que cita artigos do Código Penal
 - **THEN** os trechos citados ficam no texto do Art. 263 e não viram parágrafos do ECA
 
+### Requirement: Capturar a Lei do Inquilinato
+A ferramenta MUST capturar a Lei do Inquilinato (Lei nº 8.245/1991) na pasta `normas/lei-8245-1991/`, sem avisos nem lacunas.
+
+#### Scenario: Capturar a Lei do Inquilinato
+- **WHEN** alguém roda `npm run ingest -- lei-8245-1991 --out normas`
+- **THEN** a pasta fica com o `_norma.md` e um arquivo por artigo, do Art. 1º ao Art. 90
+
