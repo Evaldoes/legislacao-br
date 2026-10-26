@@ -11,7 +11,8 @@
   "scripts": {
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
-    "ingest": "tsx ingestion/cli.ts"
+    "ingest": "tsx ingestion/cli.ts",
+    "check": "tsx checks/cli.ts"
   },
   "dependencies": {
     "cheerio": "^1.2.0",

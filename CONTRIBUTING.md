@@ -29,6 +29,7 @@ O texto é gerado pelo programa em `ingestion/` (Node 22 e TypeScript):
 npm install
 npm test                                              # testes
 npm run typecheck
+npm run check                                         # valida o formato de normas/
 npm run ingest -- constituicao-1988 --out normas      # captura do Planalto
 ```
 

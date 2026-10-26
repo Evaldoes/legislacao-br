@@ -5,6 +5,7 @@
 **A legislação federal brasileira em Markdown, versionada com Git.**
 **Cada artigo é um arquivo. Cada emenda é um commit.**
 
+[![Validação](https://github.com/Evaldoes/legislacao-br/actions/workflows/ci.yml/badge.svg)](https://github.com/Evaldoes/legislacao-br/actions/workflows/ci.yml)
 [![Licença: CC0-1.0](https://img.shields.io/badge/licen%C3%A7a-CC0%201.0-lightgrey.svg)](LICENSE)
 [![PRs bem-vindos](https://img.shields.io/badge/PRs-bem--vindos-brightgreen.svg)](CONTRIBUTING.md)
 [![Formato: Markdown + YAML](https://img.shields.io/badge/formato-Markdown%20%2B%20YAML-blue.svg)](#-formato-dos-arquivos)
@@ -339,6 +340,8 @@ O programa:
 3. remove os trechos **riscados** (revogados) e move as notas de alteração para o campo `notas`;
 4. escreve um arquivo por artigo, o `_norma.md` com o índice e o `preambulo.md`;
 5. **aborta** se encontrar artigos faltando na numeração ou dispositivos fora de lugar.
+
+Toda mudança passa pela **validação automática** (`npm run check`), que roda no GitHub em cada push e pull request: frontmatter completo, `id` coerente com o nome do arquivo, âncoras e ids sem repetição, notas apontando para dispositivos que existem, índice sem links quebrados e nenhum artigo faltando na numeração.
 
 Um arquivo só muda quando o **conteúdo** muda: capturar de novo uma lei que não mudou não altera nada, nem a data `capturado_em`. Assim, o histórico do Git mostra só as mudanças reais da lei.
 
