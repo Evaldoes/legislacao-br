@@ -12,4 +12,4 @@
 ## 3. Conferência
 
 - [x] 3.1 `npm test`, `npm run typecheck`
-- [ ] 3.2 Execução manual do workflow no GitHub
+- [x] 3.2 Execução manual do workflow no GitHub
