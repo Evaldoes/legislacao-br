@@ -1,0 +1,20 @@
+---
+id: decreto-lei-5452-1943-art-392-c
+norma: decreto-lei-5452-1943
+artigo: 392-C
+rotulo: Art. 392-C
+hierarquia:
+  titulo: Título III – Das Normas Especiais de Tutela do Trabalho
+  capitulo: Capítulo III – Da Proteção do Trabalho da Mulher
+  secao: Seção V – Da Proteção à Maternidade
+fonte: https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm
+capturado_em: 2026-10-25
+revogado: false
+notas:
+  - dispositivo: caput
+    texto: Incluído pela Lei nº 12.873, de 2013
+---
+
+# Art. 392-C
+
+Aplica-se, no que couber, o disposto no art. 392-A e 392-B ao empregado que adotar ou obtiver guarda judicial para fins de adoção.

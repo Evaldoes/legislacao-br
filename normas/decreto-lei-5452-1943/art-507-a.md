@@ -1,0 +1,19 @@
+---
+id: decreto-lei-5452-1943-art-507-a
+norma: decreto-lei-5452-1943
+artigo: 507-A
+rotulo: Art. 507-A
+hierarquia:
+  titulo: Título IV – Do Contrato Individual do Trabalho
+  capitulo: Capítulo IX – Disposições Especiais
+fonte: https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm
+capturado_em: 2026-10-25
+revogado: false
+notas:
+  - dispositivo: caput
+    texto: Incluído pela Lei nº 13.467, de 2017
+---
+
+# Art. 507-A
+
+Nos contratos individuais de trabalho cuja remuneração seja superior a duas vezes o limite máximo estabelecido para os benefícios do Regime Geral de Previdência Social, poderá ser pactuada cláusula compromissória de arbitragem, desde que por iniciativa do empregado ou mediante a sua concordância expressa, nos termos previstos na Lei nº 9.307, de 23 de setembro de 1996.

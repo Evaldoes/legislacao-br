@@ -46,7 +46,7 @@ Este repositório resolve isso uma vez, para todo mundo:
 | Norma | Apelido | Pasta | Status |
 |---|---|---|---|
 | Constituição Federal de 1988 (inclui o ADCT) | `cf88` | [`normas/constituicao-1988/`](normas/constituicao-1988/_norma.md) | ✅ disponível (424 artigos) |
-| Consolidação das Leis do Trabalho (Decreto-Lei nº 5.452/1943) | `clt` | `normas/decreto-lei-5452-1943/` | 📋 planejado |
+| Consolidação das Leis do Trabalho (Decreto-Lei nº 5.452/1943) | `clt` | [`normas/decreto-lei-5452-1943/`](normas/decreto-lei-5452-1943/_norma.md) | ✅ disponível (1.027 artigos) |
 | Código de Defesa do Consumidor (Lei nº 8.078/1990) | `cdc` | `normas/lei-8078-1990/` | 📋 planejado |
 | Estatuto da Criança e do Adolescente (Lei nº 8.069/1990) | `eca` | `normas/lei-8069-1990/` | 📋 planejado |
 | Lei de Benefícios da Previdência Social (Lei nº 8.213/1991) | — | `normas/lei-8213-1991/` | 📋 planejado |
@@ -337,7 +337,7 @@ O programa:
 
 1. baixa a página oficial (que vem em ISO-8859-1) e separa os parágrafos;
 2. reconhece títulos, capítulos, seções, artigos, parágrafos, incisos e alíneas;
-3. remove os trechos **riscados** (revogados) e move as notas de alteração para o campo `notas`;
+3. remove os trechos **riscados** (revogados) e os de **medidas provisórias que perderam a validade** ("Vigência encerrada"), e move as notas de alteração para o campo `notas`;
 4. escreve um arquivo por artigo, o `_norma.md` com o índice e o `preambulo.md`;
 5. **aborta** se encontrar artigos faltando na numeração ou dispositivos fora de lugar.
 
@@ -355,6 +355,8 @@ Para adicionar uma norma, crie `ingestion/laws/{pasta}.ts` com a URL do Planalto
 
 - O texto é capturado **automaticamente** do [Portal da Legislação do Planalto](https://www.planalto.gov.br/legislacao), a publicação oficial consolidada do Governo Federal, pelo programa em [`ingestion/`](ingestion/).
 - Os trechos **revogados** (que aparecem riscados no site) são removidos. O texto **em vigor** é mantido.
+- Medidas provisórias que **perderam a validade** (marcadas no Planalto com "Vigência encerrada") não contam: o que elas incluíram, mudaram ou revogaram fica de fora, assim como as notas delas.
+- Na CLT, o decreto que a aprova e o quadro anexo do Art. 577 (enquadramento sindical) não foram incluídos. Tabelas dentro de artigos (como a do Art. 580) aparecem como linhas de texto.
 - As notas de alteração, como *"(Redação dada pela Emenda Constitucional nº 26, de 2000)"*, saem do corpo do texto e vão para o campo `notas`, indicando o dispositivo a que se referem.
 - **Este repositório não é uma publicação oficial.** Em caso de divergência, vale o texto publicado no Diário Oficial da União. Encontrou uma diferença? [Abra uma issue](../../issues).
 
