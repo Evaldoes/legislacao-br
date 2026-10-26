@@ -127,4 +127,11 @@ describe("splitNotes", () => {
       notes: ["Suprimido pelo Decreto-lei nº 8.737, de 19.1.1946"],
     });
   });
+
+  it("splits a note that names the kind of provision without its number", () => {
+    expect(splitNotes("até 3 (três) dias consecutivos, em virtude de casamento; (Inciso incluído pelo Decreto-lei nº 229, de 28.2.1967)")).toEqual({
+      text: "até 3 (três) dias consecutivos, em virtude de casamento;",
+      notes: ["Inciso incluído pelo Decreto-lei nº 229, de 28.2.1967"],
+    });
+  });
 });

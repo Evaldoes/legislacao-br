@@ -24,7 +24,8 @@ const PARAGRAPH = new RegExp(String.raw`^§\s*(\d+)${ORDINAL}${SUFFIX}${SEPARATO
 const SOLE_PARAGRAPH = /^Parágrafo\s+único\s*[.\-–—:]?\s*(.*)$/isu;
 const CLAUSE = /^([IVXLCDM]+)(?:-([A-Z])(?![a-zà-ú]))?(?:\s*[-–—]\s*|\s+)(.*)$/su;
 const SUBCLAUSE = /^([a-z])\s?\)\s*(.*)$/su;
-const HEADING = /^(TÍTULO|CAPÍTULO|SEÇÃO|SUBSEÇÃO)\s+([IVXLC]+(?:-[A-Z])?)\s*(?:[-–—.]\s*(.*))?$/iu;
+// Planalto sometimes drops the accents ("CAPITULO VII").
+const HEADING = /^(T[ÍI]TULO|CAP[ÍI]TULO|SE[ÇC][ÃA]O|SUBSE[ÇC][ÃA]O)\s+([IVXLC]+(?:-[A-Z])?)\s*(?:[-–—.]\s*(.*))?$/iu;
 
 // Loose links Planalto leaves at the end of headings and sentences.
 const TRAILING_LINKS = /(?:\s+(?:Regulamento|Vigência))+\s*$/u;
@@ -32,10 +33,10 @@ const TRAILING_LINKS = /(?:\s+(?:Regulamento|Vigência))+\s*$/u;
 const VALID_ROMAN = /^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$/;
 
 const HEADING_TYPES: Record<string, HeadingType> = {
-  TÍTULO: "title",
-  CAPÍTULO: "chapter",
-  SEÇÃO: "section",
-  SUBSEÇÃO: "subsection",
+  TITULO: "title",
+  CAPITULO: "chapter",
+  SECAO: "section",
+  SUBSECAO: "subsection",
 };
 
 const withSuffix = (number: string, letter?: string) => (letter ? `${number}-${letter}` : number);
@@ -65,7 +66,8 @@ function classifyProvision(block: string): Block {
 
   if ((m = HEADING.exec(block))) {
     const [, word = "", number = "", name = ""] = m;
-    return { type: HEADING_TYPES[word.toUpperCase()]!, number, name: name.trim() };
+    const key = word.toUpperCase().normalize("NFD").replace(/\p{M}/gu, "");
+    return { type: HEADING_TYPES[key]!, number, name: name.trim() };
   }
   if ((m = ARTICLE.exec(block))) {
     const [, number = "", letter, text = ""] = m;

@@ -99,7 +99,7 @@ export function buildStructure(blocks: string[], options: StructureOptions): Str
     return attached;
   };
 
-  for (const raw of blocks) {
+  for (const [index, raw] of blocks.entries()) {
     if (part === null) {
       if (!started && options.start.test(raw)) {
         started = true;
@@ -208,6 +208,10 @@ export function buildStructure(blocks: string[], options: StructureOptions): Str
           // not part of the law's structure and is dropped.
           const name = hierarchy[openHeading] ?? "";
           if (continuesName(name, b.text)) hierarchy[openHeading] = `${name} ${readableName(b.text, true)}`;
+        } else if (target && isCaption(b.text, blocks[index + 1])) {
+          // A caption between articles ("Trabalho aos domingos") is not
+          // part of the text of the article before it.
+          continue;
         } else if (target) {
           target.text.push(b.text);
           target.notes.push(...notes);
@@ -222,6 +226,13 @@ export function buildStructure(blocks: string[], options: StructureOptions): Str
   }
 
   return law;
+}
+
+// Short line without final punctuation followed by an article or heading.
+function isCaption(text: string, next: string | undefined): boolean {
+  if (!next || /[.;:,!?)\]]$/.test(text) || !/^\p{Lu}/u.test(text) || text.length > 80) return false;
+  const following = classifyBlock(splitNotes(next).text).type;
+  return following === "article" || LEVELS.includes(following as HeadingType);
 }
 
 function continuesName(name: string, text: string): boolean {

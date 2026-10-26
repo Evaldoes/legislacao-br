@@ -248,6 +248,15 @@ describe("buildStructure", () => {
     });
   });
 
+  it("drops a caption between articles", () => {
+    const law = buildStructure(
+      ["PREÂMBULO", "Art. 66 Entre 2 jornadas haverá descanso.", "Trabalho aos domingos", "Art. 67 Será assegurado descanso."],
+      options,
+    );
+
+    expect(law.articles[0]!.caput).toEqual(["Entre 2 jornadas haverá descanso."]);
+  });
+
   describe("provisions listed twice", () => {
     const paragraphs = (blocks: string[]) =>
       buildStructure(["PREÂMBULO", "Art. 634 - Texto.", ...blocks], options);

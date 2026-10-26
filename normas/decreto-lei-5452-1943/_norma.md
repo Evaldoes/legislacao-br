@@ -581,6 +581,8 @@ artigos:
 
 [Art. 721](art-721.md)
 
+### Capítulo VII – Das Penalidades
+
 #### Seção I – Do "lock-Out" e da Greve
 
 [Art. 722](art-722.md) · [Art. 723](art-723.md) · [Art. 724](art-724.md) · [Art. 725](art-725.md)

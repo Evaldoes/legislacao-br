@@ -124,4 +124,8 @@ describe("classifyBlock", () => {
       expect(classifyBlock(block)).toEqual(expected);
     });
   });
+
+  it("reads a heading written without accents", () => {
+    expect(classifyBlock("CAPITULO VII")).toEqual({ type: "chapter", number: "VII", name: "" });
+  });
 });
