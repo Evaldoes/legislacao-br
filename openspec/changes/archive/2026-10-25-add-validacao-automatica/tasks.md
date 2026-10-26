@@ -11,4 +11,4 @@
 ## 3. Conferência
 
 - [x] 3.1 `npm test`, `npm run typecheck`, `npm run check` sem problemas na Constituição
-- [ ] 3.2 Workflow verde no GitHub
+- [x] 3.2 Workflow verde no GitHub
