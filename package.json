@@ -12,7 +12,9 @@
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "ingest": "tsx ingestion/cli.ts",
-    "check": "tsx checks/cli.ts"
+    "check": "tsx checks/cli.ts",
+    "ingest:all": "tsx ingestion/ingest-all.ts",
+    "describe-changes": "tsx ingestion/describe-changes.ts"
   },
   "dependencies": {
     "cheerio": "^1.2.0",

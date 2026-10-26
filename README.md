@@ -343,6 +343,8 @@ O programa:
 
 Toda mudança passa pela **validação automática** (`npm run check`), que roda no GitHub em cada push e pull request: frontmatter completo, `id` coerente com o nome do arquivo, âncoras e ids sem repetição, notas apontando para dispositivos que existem, índice sem links quebrados e nenhum artigo faltando na numeração.
 
+**Atualização automática:** toda segunda-feira, o GitHub Actions captura de novo todas as normas. Se o Planalto mudou alguma coisa, abre um pull request com o diff, os artigos alterados e as emendas citadas nas notas novas (por exemplo, "constituicao-1988: atualização do Planalto (EC 141/2026)"). Uma pessoa revisa antes de juntar. Para capturar tudo na sua máquina: `npm run ingest:all`.
+
 Um arquivo só muda quando o **conteúdo** muda: capturar de novo uma lei que não mudou não altera nada, nem a data `capturado_em`. Assim, o histórico do Git mostra só as mudanças reais da lei.
 
 Para adicionar uma norma, crie `ingestion/laws/{pasta}.ts` com a URL do Planalto, a descrição e os marcadores de início e fim do texto (veja [`constituicao-1988.ts`](ingestion/laws/constituicao-1988.ts)) e registre em `ingestion/laws/index.ts`.
